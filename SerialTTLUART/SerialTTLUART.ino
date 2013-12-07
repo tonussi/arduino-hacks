@@ -85,10 +85,9 @@ void stopbits(byte stopbit) {
 
 void parity(int parity) {
   if ((parity == 'o')|(parity == 'O')) //ODD
-    UCSR0C = UCSR0C | B00110000;
+  UCSR0C = UCSR0C | B00110000;
   else if ((parity == 'e')|(parity == 'E')) //EVEN
-    UCSR0C = UCSR0C | B00100000;
+  UCSR0C = UCSR0C | B00100000;
   else if ((parity == 'n')|(parity == 'N')) //NONE
-    UCSR0C = UCSR0C | B00000000;
+  UCSR0C = UCSR0C | B00000000;
 }
-
